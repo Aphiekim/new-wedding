@@ -1,1 +1,2 @@
-# new-wedding
+# wedding
+Wedding invitation
