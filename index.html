@@ -71,18 +71,14 @@
                     </a> -->
                     <div style="padding-top: 5%;"></div>
                     <div id="map" style="width:100%;height:400px;"></div>
-                    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&callback=initMap"></script>
-                    <script type="text/javascript">
-                    //지도를 삽입할 HTML 요소 또는 HTML 요소의 id를 지정합니다.
-                    var mapDiv = document.getElementById('map'); // 'map'으로 선언해도 동일
-                    //옵션 없이 지도 객체를 생성하면 서울 시청을 중심으로 하는 16 레벨의 지도가 생성됩니다.
-                    var map = new naver.maps.Map(mapDiv);
-
-                      // var obj = document.getElementById('map');
-                      // var map = new naver.maps.Map(obj, {
-                      //     center: new naver.maps.LatLng(37.3595704, 127.105399),
-                      //     zoom: 10
-                      // });
+                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3fb4350630145a493014e13fe5dfc4c5"></script>
+                    <script>
+                      var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+                      var options = { //지도를 생성할 때 필요한 기본 옵션
+                        center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+                        level: 3 //지도의 레벨(확대, 축소 정도)
+                      };
+                      var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
                   </script>
                 </div>
             </div>
@@ -183,42 +179,60 @@
 
         <!-- Contact-->
         <section class="page-section" id="contact">
-          <div class="container px-4 px-lg-5">
+          <div class="container px-4 px-lg-5 text-center">
               <div class="row gx-4 gx-lg-5 justify-content-center">
                   <div class="col-lg-8 col-xl-6 text-center">
                       <h2 class="mt-0">마음 전하실 곳</h2>
                       <hr class="divider" />
                   </div>
               </div>
-              <div class="row gx-4 gx-lg-5 justify-content-center text-center">
-                <p class="text-muted mb-3"><i class="bi-heart-fill"></i> 신랑측 <i class="bi-heart-fill"></i></p>
-                  <div class="row text-center mb-5 mb-lg-0">
-                    <div class="col">
-                      <p>아버지 김장환</p>
-                      <a class="btn btn-outline-secondary" href="tel:010-7118-0881"><i class="bi-phone fs-2 mb-3"></i></a>
-                      <a class="btn btn-outline-warning" href=""><i class="bi-bank fs-2 mb-3"></i></a>
-                    </div>
-                    <div class="col">
-                      <p>신랑 김동수</p>
-                      <a class="btn btn-outline-secondary" href="tel:010-5612-0881"><i class="bi-phone fs-2 mb-3"></i></a>
-                      <a class="btn btn-outline-warning" href=""><i class="bi-bank fs-2 mb-3"></i></a>
-                    </div>
-                  </div>
-              </div>
-              <div class="row gx-4 gx-lg-5 justify-content-center text-center">
-                <p class="text-muted mb-3"><i class="bi-heart-fill"></i> 신부측 <i class="bi-heart-fill"></i></p>
-                  <div class="row text-center mb-5 mb-lg-0">
-                    <div class="col">
-                      <p>아버지 김기택</p>
-                      <a class="btn btn-outline-secondary" href="tel:010-9072-1699"><i class="bi-phone fs-2 mb-3"></i></a>
-                      <a class="btn btn-outline-warning" href=""><i class="bi-bank fs-2 mb-3"></i></a>
-                    </div>
-                    <div class="col">
-                      <p>신부 김민영</p>
-                      <a class="btn btn-outline-secondary" href="tel:010-5872-9194"><i class="bi-phone fs-2 mb-3 mr-3"></i></a>
-                      <a class="btn btn-outline-warning" href="https://qr.kakaopay.com/Ej85gqFD7"><i class="bi-bank fs-2 mb-3"></i></a>
+              <div class="accordion text-center" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      <p class="text-muted mb-3"><i class="bi-heart-fill"></i> 신랑측 <i class="bi-heart-fill"></i></p>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col">
+                          <p>아버지 김장환</p>
+                          <a class="btn btn-outline-secondary" href="tel:010-7118-0881"><i class="bi-phone fs-2 mb-3"></i></a>
+                          <a class="btn btn-outline-warning" href=""><i class="bi-bank fs-2 mb-3"></i></a>
+                        </div>
+                        <div class="col">
+                          <p>신랑 김동수</p>
+                          <a class="btn btn-outline-secondary" href="tel:010-5612-0881"><i class="bi-phone fs-2 mb-3"></i></a>
+                          <a class="btn btn-outline-warning" href=""><i class="bi-bank fs-2 mb-3"></i></a>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <p class="text-muted mb-3"><i class="bi-heart-fill"></i> 신부측 <i class="bi-heart-fill"></i></p>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="row text-center">
+                        <div class="col">
+                          <p>아버지 김기택</p>
+                          <a class="btn btn-outline-secondary" href="tel:010-9072-1699"><i class="bi-phone fs-2 mb-3"></i></a>
+                          <a class="btn btn-outline-warning" href=""><i class="bi-bank fs-2 mb-3"></i></a>
+                        </div>
+                        <div class="col">
+                          <p>신부 김민영</p>
+                          <a class="btn btn-outline-secondary" href="tel:010-5872-9194"><i class="bi-phone fs-2 mb-3 mr-3"></i></a>
+                          <a class="btn btn-outline-warning" href="https://qr.kakaopay.com/Ej85gqFD7"><i class="bi-bank fs-2 mb-3"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
           </div>
         </section>
@@ -230,11 +244,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <script src="js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"></script>
     </body>
 </html>
