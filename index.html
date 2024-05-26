@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <title>동수와 민영이의 결혼식</title>
-  <!-- Bootstrap Icons-->
-  <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-  rel="stylesheet"
-  />
-  <link href="css/pre-index.css" rel="stylesheet" />
-</head>
-<body>
-  <div class="wrap">
-    <div class="container button_container">
-      <p class="description">Wedding Invitation</p>
-      <a class="btn" href="kor.html"><span>한국어</span></a>
-      <br>
-      <a class="btn" href="eng.html"><span>English</span></a>
-      <br>
-      <a class="btn" href="#quiz"><span>? ? ? ?</span></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dongsoo & Aphie</title>
+    <!-- Bootstrap Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="css/pre-index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="container button_container">
+        <p class="description">Wedding Invitation</p>
+        <a class="btn" onclick="transfer('./kor.html')"><span>한국어</span></a>
+        <br />
+        <a class="btn" onclick="transfer('./eng.html')"><span>English</span></a>
+        <br />
+        <a class="btn" href="#quiz"><span>? ? ? ?</span></a>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
+  <script>
+    function transfer(path) {
+      setTimeout(function () {
+        window.location.href = path;
+      }, 300);
+    }
+  </script>
 </html>
