@@ -8,7 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Aphie and Daniel's weddnig day!</title>
+    <title>김동수와 김민영, 결혼합니다!</title>
     <!-- Bootstrap Icons-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
@@ -39,7 +39,7 @@
         <div
           class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center"
         >
-          <div class="col-lg-8 align-self-baseline">
+          <div class="col-lg-10 align-self-baseline">
             <p class="text-white-75 mb-3">
               안녕하세요<br />
               동수와 민영입니다.<br />
@@ -70,8 +70,8 @@
           <b>김기택</b>과 <b>이순자</b>의 차녀 <b>민영</b>
         </h3>
 
-        <div class="row gx-4 gx-lg-5">
-          <div class="col-lg-3 col-md-6 text-center">
+        <div class="row">
+          <div class="text-center">
             <div class="mt-5">
               <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
               <h3 class="h4 mb-2">2024년 11월 16일 (토) 오후 1시</h3>
@@ -79,9 +79,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="container px-4 px-lg-5">
-        <div class="col-lg-3 col-md-6 text-center">
+
+        <div class="text-center">
           <div class="mt-5">
             <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
             <h3 class="h4 mb-2">오시는 길</h3>
@@ -109,7 +108,7 @@
                   ), // 지도의 중심좌표
                   level: 3, // 지도의 확대 레벨
                 };
-
+  
               var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
               // 마커가 표시될 위치입니다
               var markerPosition = new kakao.maps.LatLng(
@@ -125,7 +124,8 @@
             </script>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 text-center">
+
+        <div class="text-center">
           <div class="mt-5">
             <div class="mb-2">
               <i class="bi-exclamation-diamond-fill fs-1 text-primary"></i>
@@ -142,7 +142,8 @@
             </p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 text-center">
+
+        <div class="text-center">
           <div class="mt-5">
             <div class="mb-2"><i class="bi-check2 fs-1 text-primary"></i></div>
             <h4 class="h4 mb-2">지하철 이용시</h4>
@@ -161,7 +162,8 @@
             </p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 text-center">
+        
+        <div class="text-center">
           <div class="mt-5">
             <div class="mb-2">
               <i class="bi-calendar-event fs-1 text-primary"></i>
@@ -177,6 +179,7 @@
             </p>
           </div>
         </div>
+      </div>
       </div>
     </section>
     <!-- Portfolio-->
@@ -229,13 +232,11 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="col-lg-4 col-sm-6">
                 <img
                   class="img-fluid"
                   src="assets/img/portfolio/thumbnails/1.jpg"
                   alt="..."
                 />
-              </div>
             </div>
             <div class="carousel-item">
               <img
@@ -296,15 +297,43 @@
     </div>
 
     <!-- Contact-->
-    <section class="page-section" id="contact">
+    <section class="page-section" style="padding-bottom:0%;">
       <div class="container px-4 px-lg-5 text-center">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col">
+            <p class="text-muted mb-2">신랑에게 연락하기</p>
+            <p>김동수</p>
+            <a
+              href="tel:010-5612-0881"
+              ><i class="bi-telephone-fill fs-5 mr-2"></i
+            ></a>
+          </div>
+          <div class="col">
+            <p class="text-muted mb-2">신부에게 연락하기</p>
+            <p>김민영</p>
+            <a
+              href="tel:010-5872-9194"
+              ><i class="bi-telephone-fill fs-5 mr-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="contact">
+      <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-lg-8 col-xl-6 text-center">
             <h2 class="mt-0">마음 전하실 곳</h2>
-            <hr class="divider" />
+            <hr class="divider"/>
+            <div class="gx-4 mb-4 text-muted">
+              참석이 어려워 직접 축하를 전하지 못하는<br>
+              분들을 위해 계좌번호를 기재하였습니다.<br>
+              넓은 마음으로 양해 부탁드립니다.
+            </div>
           </div>
         </div>
-        <div class="accordion text-center" id="accordionExample">
+        <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button
@@ -329,32 +358,18 @@
             >
               <div class="accordion-body">
                 <div class="row">
-                  <div class="col">
-                    <p>아버지 김장환</p>
-                    <a
-                      class="btn btn-outline-secondary"
-                      href="tel:010-7118-0881"
-                      ><i class="bi-phone fs-2 mb-3"></i
-                    ></a>
-                    <a class="btn btn-outline-warning" href=""
-                      ><i class="bi-bank fs-2 mb-3"></i
-                    ></a>
+                  <p>신랑 <b>김동수</b></p>
+                  <div class="contact-fam" >
+                    <input type="text" class="account text-muted" id="soo1" readonly value="기업은행 01056120881">
+                    <a class="btn btn-outline-secondary" onclick="copy_to_clipboard(soo1);"><i class="bi-files"></i>복사</a>
                   </div>
-                  <div class="col">
-                    <p>신랑 김동수</p>
-                    <a
-                      class="btn btn-outline-secondary"
-                      href="tel:010-5612-0881"
-                      ><i class="bi-phone fs-2 mb-3"></i
-                    ></a>
-                    <a
-                      class="btn btn-outline-warning"
-                      href="https://qr.kakaopay.com/Ej7kpuaLt"
-                      ><img
-                        src="./assets/img/icons/kakao-icon.png"
-                        width="50"
-                        height="50"
-                    /></a>
+                </div>
+                <hr>
+                <div class="row">
+                  <p>아버지 <b>김장환</b></p>
+                  <div class="contact-fam" >
+                    <input type="text" class="account text-muted" id="soo2" readonly value="기업은행 01000000000">
+                    <a class="btn btn-outline-secondary" onclick="copy_to_clipboard(soo2);"><i class="bi-files"></i>복사</a>
                   </div>
                 </div>
               </div>
@@ -363,7 +378,7 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button collapsed text-center"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseTwo"
@@ -383,33 +398,19 @@
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                <div class="row text-center">
-                  <div class="col">
-                    <p>아버지 김기택</p>
-                    <a
-                      class="btn btn-outline-secondary"
-                      href="tel:010-9072-1699"
-                      ><i class="bi-phone fs-2 mb-3"></i
-                    ></a>
-                    <a class="btn btn-outline-warning" href=""
-                      ><i class="bi-bank fs-2 mb-3"></i
-                    ></a>
+                <div class="row">
+                  <p>신부 <b>김민영</b></p>
+                  <div class="contact-fam" >
+                    <input type="text" class="account text-muted" id="min1" readonly value="국민은행 92900201253977">
+                    <a class="btn btn-outline-secondary" onclick="copy_to_clipboard(min1);"><i class="bi-files"></i>복사</a>
                   </div>
-                  <div class="col">
-                    <p>신부 김민영</p>
-                    <a
-                      class="btn btn-outline-secondary"
-                      href="tel:010-5872-9194"
-                      ><i class="bi-phone fs-2 mb-3 mr-3"></i
-                    ></a>
-                    <a
-                      class="btn btn-outline-warning"
-                      href="https://qr.kakaopay.com/Ej85gqFD7"
-                      ><img
-                        src="./assets/img/icons/kakao-icon.png"
-                        width="50"
-                        height="50"
-                    /></a>
+                </div>
+                <hr>
+                <div class="row">
+                  <p>아버지 <b>김기택</b></p>
+                  <div class="contact-fam" >
+                    <input type="text" class="account text-muted" id="min2" readonly value="국민은행 671402001507443">
+                    <a class="btn btn-outline-secondary" onclick="copy_to_clipboard(min2);"><i class="bi-files"></i>복사</a>
                   </div>
                 </div>
               </div>
@@ -440,5 +441,14 @@
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"
     ></script>
+    <script>
+      function copy_to_clipboard(textId) {
+        let target = textId;
+        target.select();
+        target.setSelectionRange(0, 999999);
+        document.execCommand("copy");
+        alert("계좌가 복사완료되었습니다.");
+      }
+    </script>
   </body>
 </html>
