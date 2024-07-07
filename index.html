@@ -19,9 +19,17 @@
       <a class="btn" href="kor.html"><span>한국어</span></a>
       <br>
       <a class="btn" href="eng.html"><span>English</span></a>
-      <br>
-      <a class="btn" href="#quiz"><span>? ? ? ?</span></a>
     </div>
   </div>
+  <script>
+    let userAgent = navigator.userAgent;
+    let isMobile = userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i);
+    console.log(isMobile);
+    console.log(userAgent);
+
+    if (!isMobile) {
+        window.location.replace("404.html");
+    }
+  </script>
 </body>
 </html>
