@@ -404,7 +404,7 @@
                 aria-expanded="false"
                 aria-controls="collapseOne"
               >
-                <p class="text-muted accordions">
+                <span class="text-muted accordions">
                   <i class="bi-heart-fill"></i> Dongsoo Daniel Kim
                   <i class="bi-heart-fill"></i>
                 </span>
@@ -424,22 +424,6 @@
                     <a class="btn btn-outline-secondary btn-sm" onclick="copy_to_clipboard(soo1);"><i class="bi-files"></i>복사</a>
                   </div>
                 </div>
-                <hr>
-                <div class="row">
-                  <p>Kakao Pay</p>
-                  <div class="contact-fam" >
-                    <input type="text" class="account text-muted" id="soo2" readonly value="-">
-                    <a class="btn btn-outline-secondary btn-sm" onclick="copy_to_clipboard(soo2);"><i class="bi-files"></i>복사</a>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <p>Line Pay</p>
-                  <div class="contact-fam" >
-                    <input type="text" class="account text-muted" id="soo3" readonly value="-">
-                    <a class="btn btn-outline-secondary btn-sm" onclick="copy_to_clipboard(soo3);"><i class="bi-files"></i>복사</a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -453,7 +437,7 @@
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-                <p class="text-muted accordions">
+                <span class="text-muted accordions">
                   <i class="bi-heart-fill"></i> Minyoung Aphie Kim
                   <i class="bi-heart-fill"></i>
                 </span>
@@ -471,21 +455,6 @@
                   <div class="contact-fam" >
                     <input type="text" class="account text-muted" id="min1" readonly value="KB 92900201253977">
                     <a class="btn btn-outline-secondary btn-sm" onclick="copy_to_clipboard(min1);"><i class="bi-files"></i>복사</a>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <p>Kakao Pay</b></p>
-                  <div class="contact-fam" >
-                    <input type="text" class="account text-muted" id="min2" readonly value="-">
-                    <a class="btn btn-outline-secondary btn-sm" onclick="copy_to_clipboard(min2);"><i class="bi-files"></i>복사</a>
-                  </div>
-                </div>
-                <div class="row">
-                  <p>Line Pay</b></p>
-                  <div class="contact-fam" >
-                    <input type="text" class="account text-muted" id="min3" readonly value="-">
-                    <a class="btn btn-outline-secondary btn-sm" onclick="copy_to_clipboard(min2);"><i class="bi-files"></i>복사</a>
                   </div>
                 </div>
               </div>
@@ -526,7 +495,7 @@
         target.select();
         target.setSelectionRange(0, 999999);
         document.execCommand("copy");
-        alert("계좌가 복사완료되었습니다.");
+        alert("Account numbers copied");
       }
     </script>
   </body>
