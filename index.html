@@ -1,35 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <title>동수와 민영이의 결혼식</title>
-  <!-- Bootstrap Icons-->
-  <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-  rel="stylesheet"
-  />
-  <link href="css/pre-index.css" rel="stylesheet" />
-</head>
-<body>
-  <div class="wrap">
-    <div class="container button_container">
-      <p class="description">Wedding Invitation</p>
-      <a class="btn" href="kor.html"><span>한국어</span></a>
-      <br>
-      <a class="btn" href="eng.html"><span>English</span></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>동수와 민영이의 결혼식</title>
+    <meta
+      property="og:image"
+      content="https://storage.googleapis.com/daniel-aphie/assets/img/wedding/fullsize/8.jpg"
+    />
+    <meta property="og:type" content="동수+민영" />
+    <meta property="og:url" content="dongsoo.net" />
+    <meta
+      property="og:description"
+      content="24년 11월 16일 13시, 연세대 동문회관"
+    />
+    <!-- Bootstrap Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="css/pre-index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="container button_container">
+        <p class="description" style="font-size: large" id="demo">
+          11.16 13:00
+        </p>
+        <p class="description">Wedding Invitation</p>
+        <a class="btn" href="kor.html"><span>한국어</span></a>
+        <br />
+        <a class="btn" href="eng.html"><span>English</span></a>
+        <br />
+        <a
+          class="btn"
+          style="background-color: #0091ff"
+          href="https://youtu.be/F_u7nTPvN2g?si=xIoj_-o0pTOjyNfV"
+          ><span>Video</span></a
+        >
+      </div>
     </div>
-  </div>
-  <script>
-    let userAgent = navigator.userAgent;
-    let isMobile = userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i);
-    console.log(isMobile);
-    console.log(userAgent);
+    <script>
+      let userAgent = navigator.userAgent;
+      let isMobile = userAgent.match(
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+      );
+      console.log(isMobile);
+      console.log(userAgent);
 
-    if (!isMobile) {
+      if (!isMobile) {
         window.location.replace("404.html");
-    }
-  </script>
-</body>
+      }
+    </script>
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Nov 16, 2024 13:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("demo").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "NOW!";
+        }
+      }, 1000);
+    </script>
+  </body>
 </html>
